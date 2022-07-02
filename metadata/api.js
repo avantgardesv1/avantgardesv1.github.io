@@ -1,45 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    async function printJSON() {
-        const response = await fetch("api.json");
-        const json = await response.json();
-        console.log(json);
-    }
-
-    printJSON()
-
-const obj = JSON.stringify(data)
-document.querySelector("#raw").innerHTML = obj;
-
-var data = {
-    "name": "Avant-Garde #0",
-    "image": "https://ipfs.io/ipfs/Qmc58wHhwQyVxCxgAqfzR9Z1Yp2PM7saAx2z6qE4zFhgkp",
-    "attributes": [
-        {
-            "trait_type": "Background",
-            "value": "Dingy Yellorange"
-        },
-        {
-            "trait_type": "Eyes",
-            "value": "Truly Unfortunate"
-        },
-        {
-            "trait_type": "Extra",
-            "value": "Ranch It Up"
-        },
-        {
-            "trait_type": "Clothes",
-            "value": "Carlos"
-        },
-        {
-            "trait_type": "Head",
-            "value": "Watermelon"
-        },
-        {
-            "trait_type": "Mouth",
-            "value": "Snoop Dogg"
+    // Getting the NFT tokenId
+    const path = String(window.location.pathname);
+    for (x=path.length; x>0; x--) {
+        console.log(path[x])
+        if (path[x] === "/") {
+            var id = path.substring(x + 1, path.length).replace(/\D/g, "");
+            break
         }
-    ]
-}
+    }
+    console.log(`ID: ${id}`)
+
+    // Returning the API data for that id
+    const obj = JSON.stringify(data[id], null, 4)
+    document.querySelector("#raw").innerHTML = obj;
 
 });
