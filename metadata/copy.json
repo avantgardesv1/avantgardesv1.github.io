@@ -1,17 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-
-    async function printJSON() {
-        const response = await fetch("api.json");
-        const json = await response.json();
-        console.log(json);
-    }
-
-    printJSON()
-
-const obj = JSON.stringify(data)
-document.querySelector("#raw").innerHTML = obj;
-
-var data = {
+{
     "name": "Avant-Garde #0",
     "image": "https://ipfs.io/ipfs/Qmc58wHhwQyVxCxgAqfzR9Z1Yp2PM7saAx2z6qE4zFhgkp",
     "attributes": [
@@ -41,5 +28,3 @@ var data = {
         }
     ]
 }
-
-});
