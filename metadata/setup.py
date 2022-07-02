@@ -1,7 +1,7 @@
 # write-html.py
 
 
-for i in range(3):
+for i in range(6969):
     f = open(f'metadata/{i}.html','w')
 
     message = """<!DOCTYPE html>
