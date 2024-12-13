@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
+    <title>Phil Yates</title>
     <style>
+        body {
+            font-family: arial black;
+        }
         #gallery {
-            column-count: 3; /* Adjust the number of columns here */
-            column-gap: 16px; /* Adjust the space between columns */
+            column-count: 3; /* Default number of columns */
+            column-gap: 16px; /* Space between columns */
         }
 
         #gallery div {
@@ -19,9 +22,17 @@
             display: block;
             border-radius: 8px; /* Optional: Add some styling to images */
         }
+
+        /* Media query for screens under 500px */
+        @media (max-width: 500px) {
+            #gallery {
+                column-count: 2; /* Switch to two columns */
+            }
+        }
     </style>
 </head>
 <body>
+    <h1>Phil Yates</h1>
     <div id="gallery">
         <!-- Dynamically updated images -->
         <div><a href="static/1.jpg"><img src="static/1.jpg" alt="Image 1"></a></div>
