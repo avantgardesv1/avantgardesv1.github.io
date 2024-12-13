@@ -17,6 +17,9 @@ body {
     margin: 35px auto;
     padding: 35px;
 }
+#gallery-wrapper {
+    margin: 15px;
+}
 #gallery {
     column-count: 3;
     column-gap: 16px;
@@ -24,7 +27,6 @@ body {
     column-fill: balance;
     display: block;
     width: 100%;
-    margin: 15px;
 }
 #gallery div {
     margin-bottom: 16px;
@@ -52,6 +54,7 @@ body {
     <div id="header">
         <img src="static/phil.png" alt="Phil Yates">
     </div>
+    <div id="gallery-wrapper">
     <div id="gallery">
         <!-- Dynamically updated images -->
         <div><a href="static/1.jpg"><img src="static/1.jpg" alt="Image 1"></a></div>
@@ -79,6 +82,7 @@ body {
         <div><a href="static/23.jpg"><img src="static/23.jpg" alt="Image 23"></a></div>
         <div><a href="static/24.jpg"><img src="static/24.jpg" alt="Image 24"></a></div>
         <div><a href="static/25.jpg"><img src="static/25.jpg" alt="Image 25"></a></div>
+    </div>
     </div>
 </body>
 </html>
