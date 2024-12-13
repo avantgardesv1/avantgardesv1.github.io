@@ -5,43 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phil Yates</title>
     <style>
-        body {
-            font-family: arial black;
-            margin: 15px;
-            padding: 0;
-        }
-        #header img {
-            width: 100%;
-            max-width: 300px; /* Optional: Set a max width for larger screens */
-            display: block;
-            margin: 35px auto; /* Center the image */
-            padding: 35px;
-        }
-
-        #gallery {
-            column-count: 3; /* Default number of columns */
-            column-gap: 16px; /* Space between columns */
-            overflow-x: hidden;
-            column-fill: balance; /* Distribute content evenly */
-        }
-
-        #gallery div {
-            margin-bottom: 16px;
-            break-inside: avoid; /* Prevent breaks inside columns */
-        }
-
-        #gallery img {
-            width: 100%;
-            display: block;
-            border-radius: 8px; /* Optional: Add some styling to images */
-        }
-
-        /* Media query for screens under 500px */
-        @media (max-width: 500px) {
-            #gallery {
-                column-count: 2; /* Switch to two columns */
-            }
-        }
+body {
+    font-family: arial black;
+    margin: 0;
+    padding: 0;
+}
+#header img {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 35px auto;
+    padding: 35px;
+}
+#gallery {
+    column-count: 3;
+    column-gap: 16px;
+    overflow-x: hidden;
+    column-fill: balance;
+    display: block;
+    width: 100%;
+}
+#gallery div {
+    margin-bottom: 16px;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+#gallery img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+/* Media query for screens under 500px */
+@media (max-width: 500px) {
+    #gallery {
+        column-count: 2;
+    }
+}
     </style>
 </head>
 <body>
