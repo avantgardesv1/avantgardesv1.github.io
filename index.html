@@ -8,6 +8,13 @@
         body {
             font-family: arial black;
         }
+        #header img {
+            width: 100%;
+            max-width: 300px; /* Optional: Set a max width for larger screens */
+            display: block;
+            margin: 0 auto; /* Center the image */
+        }
+
         #gallery {
             column-count: 3; /* Default number of columns */
             column-gap: 16px; /* Space between columns */
@@ -32,7 +39,9 @@
     </style>
 </head>
 <body>
-    <h1>Phil Yates</h1>
+    <div id="header">
+        <img src="static/phil.png" alt="Phil Yates">
+    </div>
     <div id="gallery">
         <!-- Dynamically updated images -->
         <div><a href="static/1.jpg"><img src="static/1.jpg" alt="Image 1"></a></div>
