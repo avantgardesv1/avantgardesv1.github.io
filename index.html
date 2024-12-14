@@ -84,5 +84,31 @@ body {
         <div><a href="static/25.jpg"><img src="static/25.jpg" alt="Image 25"></a></div>
     </div>
     </div>
+
+    <div id="header">
+        <a href="https://philyates-1-shop.fourthwall.com" class="link-preview"></a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@microlink/vanilla@latest/umd/microlink.min.js"></script>
+    <script>
+        function initMicrolink() {
+            if (typeof microlink === 'function') {
+                document.querySelectorAll('.link-preview').forEach(el => {
+                    microlink(el, { 
+                        prerender: true,
+                        size: 'large',
+                    });
+                });
+            } else {
+                console.error('Microlink function not available');
+            }
+        }
+    
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initMicrolink);
+        } else {
+            initMicrolink();
+        }
+    </script>
 </body>
 </html>
